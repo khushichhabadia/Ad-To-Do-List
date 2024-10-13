@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todo-app">
+                <!-- Creating A section for TO Do List -->
+        <section class="todo-header">
+            <h1>Todo List</h1>
+        </section>
+<!-- Created A Form for Prioritising the task -->
+        <section class="todo-form">
+            <form id="todo-form">
+                <input type="text" id="task-input" placeholder="Add a task..." required>
+                <!-- Added a calendar to set a due date -->
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date">
+                <!-- Priority set according to the importance of the task -->
+                <label for="priority">Priority:</label>
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <!-- Buutom created to add a task in the list -->
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="todo-filters">
+            <div id="filters">
+                <!-- Added js button to filter task -->
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('active')">Active</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+                <button onclick="filterTasks('overdue')">Overdue</button>
+            </div>
+        </section>
+
+        <section class="todo-list">
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
